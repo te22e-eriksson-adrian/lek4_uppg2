@@ -28,6 +28,14 @@ public class App {
         int plats2 = tangentbord.nextInt();
         String del_strang = text.substring(plats1, plats2);
         System.out.println("Text från tecken "+plats1+" till "+plats2+" är: "+del_strang);
+        tangentbord.nextLine();
+
+        //Innehåller ord (sant / falskt)
+        System.out.println("        ");
+        System.out.print("Ange ord/tecken från texten som du vill kontrollera existensen på: ");
+        String text3 = tangentbord.nextLine();
+        boolean svar = text.contains(text3);
+        System.out.println("Svar: "+svar);
         tangentbord.close();
     }
 }
