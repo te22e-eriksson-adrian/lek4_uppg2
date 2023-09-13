@@ -14,6 +14,7 @@ public class App {
 
         //Söka efter tecken som skrivits tidigare
         System.out.println("        ");
+        System.out.println("(Skriv tecknet exakt som du skrev det i texten.)");
         System.out.print("Ange tecken att söka efter: ");
         String text2 = tangentbord.nextLine();
         int t_index = text.indexOf(text2);
@@ -36,6 +37,19 @@ public class App {
         String text3 = tangentbord.nextLine();
         boolean svar = text.contains(text3);
         System.out.println("Svar: "+svar);
+
+        //byta ut text
+        System.out.println("        ");
+        System.out.println("Nu kan du byta ut en del av din text! Fyll i nedan:");
+        System.out.print("Ange text/textdel som ska ersättas: ");
+        String gammal_text = tangentbord.nextLine();
+        System.out.print("Ange ny text/textdel: ");
+        String ny_text = tangentbord.nextLine();
+        String text_andring = text.replace(gammal_text, ny_text);
+        System.out.println(gammal_text+" har bytts ut mot "+ny_text+" (se texten nedan)");
+        System.out.println("        ");
+        System.out.println(text_andring);
+        
         tangentbord.close();
     }
 }
